@@ -45,7 +45,12 @@
             <div class="circle blue"></div>
             <div class="circle"></div> -->
         </div>
-        <HowItWorks />
+        <div class="px-20">
+            <HowItWorks />
+            <Features />
+            <OurProducts />
+        </div>
+       
     </div>
 </template>
 
