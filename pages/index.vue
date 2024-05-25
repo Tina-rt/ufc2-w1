@@ -1,6 +1,6 @@
 <template>
-    <div class="main relative">
-        <Navbar class="fixed top-3 left-0" />
+    <div class="main relative flex flex-col">
+        <Navbar class="fixed top-0 left-0 z-20" />
         <div class="hero screen py-24  flex flex-col w-full items-center relative">
             <div class="circle green" v-for="i in Array.from({ length: 3 }, (v, k) => k)" :style="{
                 bottom: `${i * 40}px`,
@@ -9,7 +9,7 @@
 
             </div>
             <div class="flex justify-between z-10 px-20">
-                <div class="hero-content w-2/5 flex flex-col gap-5 justify-evenly h-full">
+                <div class="hero-content w-2/5 flex flex-col gap-5 justify-evenly h-full ">
                     <div class="hero-title ">
                         <h1 class=" font-bold">
                             The Best View In The World From Your Site
@@ -50,7 +50,9 @@
             <Features />
             <OurProducts />
         </div>
-       
+        <Testimonials />
+        <BlogAndNews />
+        <Footer />
     </div>
 </template>
 
@@ -69,7 +71,6 @@ const brands = ref([
 
 <style lang="scss" scoped>
 .hero {
-    height: 100vh;
     color: white;
     position: relative;
     background-color: #BF8BE8;
@@ -77,8 +78,13 @@ const brands = ref([
 
     .hero-title{
         h1{
-            font-size: 5rem;
+            font-size: 3.3rem;
+            text-align: left;
+            word-spacing: 0.5rem;
         }
+    }
+    .hero-description p{
+        color: white !important;
     }
 
 }

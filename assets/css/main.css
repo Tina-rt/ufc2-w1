@@ -2,22 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeup {
+    from {
+        opacity: 0.5;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.fadeup {
+    opacity: 0.5;
+    transform: translateY(100%);
+    animation: fadeup linear;
+    animation-timeline: view();
+}
+.fadeup-2 {
+    opacity: 0.5;
+    transform: translateY(100%);
+    animation: fadeup 2s;
+    animation-timeline: view();
+}
+
+.fadein {
+    opacity: 0;
+    animation: fadein linear;
+    animation-timeline: view(200px);
+}
+.slideFromLeft {
+    transform: translateX(100%);
+    animation: slideFromLeft linear;
+    animation-timeline: view(200px);
+}
 
 html {
     font-family: "Poppins";
-
 }
 
-p{
+p {
     font-size: 1.2rem;
     color: #7b7b7b;
     line-height: 2rem;
 }
 
-a{
+a {
     font-size: 1.2rem;
 }
-
 
 body {
     /* padding: 2rem 5rem; */

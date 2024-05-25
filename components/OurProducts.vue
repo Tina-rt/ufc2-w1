@@ -1,11 +1,7 @@
 <template>
   <div>
     <div class="w-full ">
-      <div class="header text-center w-full">
-        <h1 class="text-4xl ">Our Products</h1>
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quisquam.</p>
-
-      </div>
+      <SectionTitle title="Our Products" subtitle="Elevate Your Creative Where Imagination Takes Flight !" />
       <div class="product-grid w-full place-items-center grid grid-cols-2 justify-center my-20 px-20 gap-16 " >
         <ProductCard v-for="product in products" :key="product.title" :image="product.image" :title="product.title" :description="product.description" />
       </div>

@@ -1,18 +1,18 @@
 <template>
   <div class="w-full flex flex-col items-center justify-start py-10">
     <div class="title flex flex-col gap-10 items-center">
-      <h1 class="text-5xl">How It Works</h1>
-      <p class=" text-gray-500 w-2/3 text-center">Our drones capture moments with a bird's eye view</p>
+      <h1 class="text-5xl fadeup">How It Works</h1>
+      <p class=" fadein text-gray-500 w-2/3 text-center">Our drones capture moments with a bird's eye view</p>
     </div>
     <div class="feature-list w-full px-28 my-10 py-10 flex justify-center gap-20 ">
-      <div class="feature flex flex-col items-center gap-8 min-w-48" v-for="f in feature">
-        <div class="feature-image w-20">
+      <div class=" slideFromLeft feature flex flex-col items-center gap-8 min-w-48" v-for="f in feature">
+        <div class="feature-image w-20 ">
           <img :src="f.image" alt="feature image">
         </div>
-        <div class="feature-title">
+        <div class="fadeup feature-title">
           <h1 class="text-4xl">{{ f.title }}</h1>
         </div>
-        <div class="feature-description text-center text-gray-500">
+        <div class="fadeup feature-description text-center text-gray-500">
           <p>{{ f.description }}</p>
         </div>
       </div>
