@@ -23,12 +23,31 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
+
+.video-section:hover {
+    transform: rotateY(10deg) rotateZ(5deg);
+  .rec {
+    transform: scale(1.4);
+  }
+
+  .image{
+    img {
+      transform: scale(0.95);
+    }
+  }
+  
+}
 .video-section {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 600px;
+  transition: all 0.3s ease-in-out;
+
+  *{
+    transition: all 0.4s ease-in-out;
+  }
   .rec {
       width: 100px;
       height: 100px;
@@ -38,6 +57,7 @@ const props = defineProps({
       transform: scale(1.3);
       box-shadow: 2px 5px 10px 0px rgba(90, 90, 90, 0.5);
       z-index: -1;
+      transition: all 0.3s ease;
   }
 
   .rec1 {

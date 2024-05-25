@@ -21,11 +21,11 @@
 			<h3 class="text-5xl">
 				These Are Often Considered For Drone Product Quality
 			</h3>
-			<p class="" style="">
+			<p class="pb-5" style="">
 				As Of My Last Update in September 2021, I Can Provide You With Three Key Factors That Are Often Considered
 				For Drone Product Quality
 			</p>
-			<VideoSectionVue image="https://picsum.photos/id/10/600/400" />
+			<VideoSectionVue  image="https://picsum.photos/id/10/600/400" />
 		</div>
 		<div class="w-[40%] flex flex-col gap-10 ">
 			<MiniCard v-for="feature in features" :key="feature.title" :title="feature.title"
