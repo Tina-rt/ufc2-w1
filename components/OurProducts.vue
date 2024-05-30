@@ -2,8 +2,8 @@
   <div>
     <div class="w-full ">
       <SectionTitle title="Our Products" subtitle="Elevate Your Creative Where Imagination Takes Flight !" />
-      <div class="product-grid w-full place-items-center grid grid-cols-2 justify-center my-20 px-20 gap-16 " >
-        <ProductCard v-for="product in products" :key="product.title" :image="product.image" :title="product.title" :description="product.description" />
+      <div class="product-grid w-full place-items-center grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center my-20 px-5 lg:px-20 md:px-16 gap-16 " >
+        <ProductCard class="product-card-grid" v-for="product in products" :key="product.title" :image="product.image" :title="product.title" :description="product.description" />
       </div>
     </div>
 
@@ -35,4 +35,12 @@ const products = [
 ];
 </script>
 
-<style></style>
+<style scoped lang="scss">
+
+.product-grid{
+  .product-card-grid:nth-child(1), .product-card-grid:nth-child(2){
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+</style>
+

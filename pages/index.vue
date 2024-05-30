@@ -1,11 +1,11 @@
 <template>
     <div class="main relative flex flex-col">
-        <Navbar class="fixed top-0 left-0 z-20" />
-        <div class="hero screen py-24  flex flex-col w-full items-center relative">
+        <Navbar class=" navbar" />
+        <div class="hero screen py-24  flex flex-col w-full items-center relative ">
             <CircleAnimated />
             <CircleAnimated />
-            <div class="flex justify-between z-10 px-20">
-                <div class="hero-content w-2/5 flex flex-col gap-5 justify-evenly h-full ">
+            <div class="flex flex-col justify-between z-10 px-0 lg:px-20 md:px-16 w-full flex-wrap md:flex-row sm:flex-col">
+                <div class="hero-content lg:w-2/5 md:w-2/5 w-full flex flex-col gap-5 justify-evenly h-full ">
                     <div class="hero-title ">
                         <h1 class=" font-bold">
                             The Best View In The World From Your Site
@@ -25,11 +25,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-image w-2/4">
+                <div class="hero-image md:w-2/4 w-full">
                     <img src="~/assets/img/hero.webp" alt="hero image" />
                 </div>
             </div>
-            <div class="brand-section z-10 flex items-center w-full justify-evenly py-20">
+            <div class="brand-section z-10 flex items-center w-full justify-evenly py-20 flex-wrap gap-4">
                 <div class="brand w-20" v-for="brand in brands">
                     <img class="w-full" :src="`images/${brand}`"
                         alt="netflix" />
@@ -41,14 +41,14 @@
             <div class="circle blue"></div>
             <div class="circle"></div> -->
         </div>
-        <div class="px-20">
-            <HowItWorks />
+        <div class="lg:px-20 md:px-16 px-10">
+            <HowItWorks id="howitworks"/>
             <Features />
-            <OurProducts />
+            <OurProducts id="products"/>
         </div>
         <Testimonials />
-        <BlogAndNews />
-        <Footer />
+        <BlogAndNews id="blog" />
+        <Footer id="contact" />
     </div>
 </template>
 
@@ -66,6 +66,19 @@ const brands = ref([
 </script>
 
 <style lang="scss" scoped>
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    @media (max-width: 768px) {
+        right: 0;
+        left: 0;
+        max-width: 100dvw;
+    }
+}
 .hero {
     color: white;
     position: relative;
@@ -89,6 +102,9 @@ const brands = ref([
 
 .screen {
     padding-inline: 5rem;
+    @media screen and (max-width: 1000px) {
+        padding-inline: 2rem;
+    }
 }
 
 .brand-section{

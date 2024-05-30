@@ -1,8 +1,8 @@
 <template>
-	<div class="flex w-full justify-center px-10 py-2 gap-10">
-		<div class="w-[50%]">
-			<div class="col-content flex flex-col justify-evenly h-full">
-				<h3 class="text-5xl">
+	<div class="flex w-full justify-center md:px-16 lg:px-16 px-2 flex-wrap-reverse py-2 gap-10  md:flex-nowrap" id="services">
+		<div class="md:w-[50%] lg:w-[50%] w-full">
+			<div class="col-content flex flex-col justify-evenly h-full flex-wrap gap-4">
+				<h3 class="text-5xl text-center">
 					Empowering innovation, one drone at a time
 				</h3>
 				<p class="" style="">
@@ -14,11 +14,11 @@
 				</div>
 			</div>
 		</div>
-		<VideoSectionVue image="https://picsum.photos/id/10/600/400" />
+		<VideoSectionVue video-url="/videos/video1.mp4" />
 	</div>
-	<div class="flex w-full justify-center px-16 py-6 my-16 gap-10">
-		<div class="w-[50%] col-content flex flex-col justify-around gap-5 h-full pt-5">
-			<h3 class="text-5xl">
+	<div class="flex w-full justify-center md:px-16 lg:px-16 px-0 py-6 my-16 gap-10 flex-wrap">
+		<div class="md:w-[50%] lg:w-[50%] w-full col-content flex flex-col justify-around gap-5 h-full pt-5">
+			<h3 class="text-5xl text-center">
 				These Are Often Considered For Drone Product Quality
 			</h3>
 			<p class="pb-5" style="">
@@ -27,7 +27,7 @@
 			</p>
 			<VideoSectionVue  image="https://picsum.photos/id/10/600/400" />
 		</div>
-		<div class="w-[40%] flex flex-col gap-10 ">
+		<div class="md:w-[40%] lg:w-[40%] w-full flex flex-col gap-10 flex-wrap">
 			<MiniCard v-for="feature in features" :key="feature.title" :title="feature.title"
 				:description="feature.description" />
 		</div>

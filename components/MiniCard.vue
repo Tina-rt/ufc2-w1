@@ -1,5 +1,5 @@
 <template>
-    <div class="list-element flex p-2 gap-4">
+    <div class="list-element flex p-2 gap-4 flex-wrap">
         <div class="circle-blue  mt-4">
 
         </div>

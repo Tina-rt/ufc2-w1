@@ -61,7 +61,7 @@ onMounted(() => {
 		list.children[2].classList.add('shrinktwo');
 
 		let scrollStep =list.clientWidth / 4;
-		setInterval(() => {
+		const interval = setInterval(() => {
 			if (list) {
 				list.scrollLeft += scrollStep;
 				if (list.scrollLeft >= list.scrollWidth - list.clientWidth) {
@@ -70,25 +70,10 @@ onMounted(() => {
 			}
 		}, 2000);
 
-		let currentScrollLeft = testimonialsListRef.value.scrollLeft;
-		// testimonialsListRef.value.addEventListener('scroll', () => {
-		// 	const handleScroll = () => {
-		// 		if (testimonialsListRef.value) {
-		// 			const newScrollLeft = testimonialsListRef.value.scrollLeft;
-		// 			console.log("newscrollleft", newScrollLeft, "current scroll left", currentScrollLeft)
-		// 			if (newScrollLeft >= currentScrollLeft ) {
-		// 				testimonialsListRef.value.children[2].classList.remove('shrink');
-		// 				testimonialsListRef.value.children[2].classList.add('grow');
-		// 				console.log('Scrolled Right');
-		// 			}
-		// 			else if (newScrollLeft < currentScrollLeft) {
-		// 				console.log('Scrolled Left');
-		// 			}
-		// 			currentScrollLeft = newScrollLeft; // Update the current scroll position
-		// 		}
-		// 	};
-		// 	handleScroll(); // Call the function to handle initial comparison
-		// })
+		if (window.innerWidth < 1000) {
+			clearInterval(interval);
+		}
+
 	}
 });
 
@@ -139,15 +124,24 @@ onMounted(() => {
 
 .testimonials-list {
 	width: 100%;
+	min-width: 100%;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
 	padding-inline: 400px;
+	@media screen and (max-width: 1000px) {
+		padding-inline:10px;
+	}
 
 }
 
 .testimonialCard {
 	opacity: 0.5;
 	transform: scale(0.8);
+
+	@media screen and (max-width: 1000px) {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 .grow {

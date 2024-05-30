@@ -1,7 +1,7 @@
 <template>
   <div>
     <SectionTitle title="Blog & News" subtitle="Stay Updated with Our Latest Articles" />
-    <div class="blog-card-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center gap-4 px-40 py-5">
+    <div class="blog-card-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center gap-4 lg:px-40 md:px-20 px-5 py-5">
       <BlogCard v-for="blog in blogList" :key="blog.title" :title="blog.title" :description="blog.description" :author="blog.author" :category="blog.category" :date="blog.date" :image="blog.image" />
     </div>
   </div>

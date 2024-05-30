@@ -4,8 +4,8 @@
       <h1 class="text-5xl fadeup">How It Works</h1>
       <p class=" fadein text-gray-500 w-2/3 text-center">Our drones capture moments with a bird's eye view</p>
     </div>
-    <div class="feature-list w-full px-28 my-10 py-10 flex justify-center gap-20 ">
-      <div class=" slideFromLeft feature flex flex-col items-center gap-8 min-w-48" v-for="f in feature">
+    <div class="feature-list w-full px-28 my-10 py-10 flex justify-center gap-20 flex-wrap md:flex-nowrap md:flex-row">
+      <div class=" md:slideFromLeft feature flex flex-col items-center gap-8 min-w-48" v-for="f in feature">
         <div class="feature-image w-20 ">
           <img :src="f.image" alt="feature image">
         </div>

@@ -1,9 +1,9 @@
 <template>
-  <div class="testimonial-card flex justify-center items-center gap-4 w-full">
-    <div class="testimonial-image w-1/2">
+  <div class="testimonial-card flex flex-col md:flex-row lg:flex-row justify-center items-center gap-4 w-full">
+    <div class="testimonial-image lg:w-1/2 md:w-1/2 w-full">
       <img :src="props.testimonial.image" alt="testimonial" />
     </div>
-    <div class="testimonial-content w-1/2 ">
+    <div class="testimonial-content lg:w-1/2 md:w-1/2 w-full">
       <p class="text-quotes py-4 text-black">
         "{{ props.testimonial.quote }}"
       </p>
@@ -26,7 +26,13 @@ const props = defineProps<{
   padding:  30px;
   border-radius: 20px;
   min-width: 700px;
-  height: 400px;
+  // height: 400px;
+  aspect-ratio: 7/4;
+
+  @media screen and (max-width: 1000px) {
+    min-width: 100%;
+    
+  }
 } 
 .testimonial-image {
   // width: 100%;

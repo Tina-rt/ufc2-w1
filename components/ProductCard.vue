@@ -33,7 +33,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .product-card {
   width: 100%;
   max-width: 500px;
