@@ -4,7 +4,7 @@
         <div class="hero screen py-24  flex flex-col w-full items-center relative ">
             <CircleAnimated />
             <CircleAnimated />
-            <div class="flex flex-col justify-between z-10 px-0 lg:px-20 md:px-16 w-full flex-wrap md:flex-row sm:flex-col">
+            <div class="flex flex-col justify-between md:items-center lg:items-center z-10 px-0 lg:px-0 md:px-0 w-full flex-wrap md:flex-row sm:flex-col">
                 <div class="hero-content lg:w-2/5 md:w-2/5 w-full flex flex-col gap-5 justify-evenly h-full ">
                     <div class="hero-title ">
                         <h1 class=" font-bold">
